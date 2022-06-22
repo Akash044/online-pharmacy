@@ -7,6 +7,7 @@ import {
   Route,
 } from "react-router-dom";
 import CategoryItems from './pages/CategoryItems';
+import ContactUs from './pages/ContactUs';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <Route index element={<HomePage />} />
           <Route path="categories" element={<Categories />} />
           <Route path="categories/:id" element={<CategoryItems />} />
+          <Route path="contact" element={<ContactUs />} />
         </Routes>
       </BrowserRouter>
   );

@@ -28,8 +28,8 @@ function Header() {
                                 </ul>
                             </div>
                         </li>
-                        <li className="account"><a href="/account.html">Account</a></li>
-                        <li className="contact"><a href="/contact.html">Contact Us</a></li>
+                        <li className="account"><Link to="/home">Account</Link></li>
+                        <li className="contact"><Link to="/contact">Contact Us</Link></li>
                         <li></li>
                     </ul>
                     <div className="login-join-button row align-items-center mr-5">
