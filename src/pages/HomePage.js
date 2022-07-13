@@ -1,15 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { UserContext } from '../App'
 import Footer from '../components/constants/Footer'
 import Header from '../components/constants/Header'
 import Loading from '../components/constants/Loading'
 import HomeBanner from '../components/HomePage/HomeBanner'
 
-function HomePage() {
+const HomePage = () => {
+    const [store, setStore] = useContext(UserContext)
     return (
         <>
-            <Header />
+            <Header cart={store.cart} />
             <HomeBanner />
-            <Loading />
+            {/* <Loading /> */}
             <Footer />
         </>
     )

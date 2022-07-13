@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { UserContext } from '../App'
 import EachCategory from '../components/CategoriesPage/EachCategory'
 import Footer from '../components/constants/Footer'
 import Header from '../components/constants/Header'
@@ -6,35 +7,36 @@ import '../styles/style.css'
 import '../styles/style2.css'
 
 const Categories = () => {
+    const [store, setStore] = useContext(UserContext)
     const [categories, setCategories] = useState([
         {
-            image: '../assets/images/pic3.jpg',
+            image: 'https://i.postimg.cc/jj7Bm2CB/pic3.jpg',
             name: "Capsules"
         },
         {
-            image: '../assets/images/pic4.jpg',
+            image: 'https://i.postimg.cc/9Qtxskht/pic4.png',
             name: "Tablets"
         },
         {
-            image: '../assets/images/pic5.jpg',
+            image: 'https://i.postimg.cc/RZst31Qx/pic5.jpg',
             name: "Vitamins"
         },
         {
-            image: '../assets/images/pic6.jpg',
-            name: "Ointment"
+            image: 'https://i.postimg.cc/DzGz21xg/pic6.webp',
+            name: "Ointments"
         },
         {
-            image: '../assets/images/pic7.jpg',
-            name: "Syrup"
+            image: 'https://i.postimg.cc/bYmqf6zP/pic7.jpg',
+            name: "Syrups"
         },
         {
-            image: '../assets/images/pic8.jpg',
-            name: "Calcium"
+            image: 'https://i.postimg.cc/xCtVYCV5/pic8.jpg',
+            name: "Calciums"
         },
     ])
     return (
         <>
-        <Header />
+            <Header cart={store.cart} />
             <main>
                 <section className="my-5 container-fluid">
                     <div className="container-fluid">
@@ -48,7 +50,7 @@ const Categories = () => {
                     </div>
                 </section>
             </main>
-        <Footer />
+            <Footer />
         </>
     )
 }
